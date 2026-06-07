@@ -1,0 +1,25 @@
+{
+  "acpVersion": "0.1",
+  "agent": {
+    "name": "meok-iru-tir-international-mcp",
+    "description": "International road transport compliance: TIR Carnet, CMR consignment note, ADR dangerous goods",
+    "version": "1.0.0",
+    "provider": "MEOK AI Labs",
+    "interfaces": [
+      {
+        "type": "mcp",
+        "transport": "stdio",
+        "package": "meok-iru-tir-international-mcp"
+      }
+    ],
+    "capabilities": [
+      "check_tir_carnet_requirements",
+      "generate_tir_carnet_paperwork",
+      "validate_iru_associate_member",
+      "check_aeo_status",
+      "check_cmr_consignment_note",
+      "check_dangerous_goods_adr_international",
+      "prepare_border_crossing_pack"
+    ]
+  }
+}

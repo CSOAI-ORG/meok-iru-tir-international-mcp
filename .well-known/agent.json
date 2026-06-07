@@ -1,0 +1,86 @@
+{
+  "name": "meok-iru-tir-international-mcp",
+  "description": "International road transport compliance: TIR Carnet, CMR consignment note, ADR dangerous goods",
+  "url": "https://proofof.ai/scorecard/meok-iru-tir-international-mcp.html",
+  "version": "1.0.0",
+  "protocolVersion": "0.2.0",
+  "provider": {
+    "organization": "MEOK AI Labs",
+    "url": "https://meok.ai"
+  },
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false
+  },
+  "defaultInputModes": [
+    "text"
+  ],
+  "defaultOutputModes": [
+    "text"
+  ],
+  "skills": [
+    {
+      "id": "check_tir_carnet_requirements",
+      "name": "Check Tir Carnet Requirements",
+      "description": "check_tir_carnet_requirements via meok-iru-tir-international-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "generate_tir_carnet_paperwork",
+      "name": "Generate Tir Carnet Paperwork",
+      "description": "generate_tir_carnet_paperwork via meok-iru-tir-international-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "validate_iru_associate_member",
+      "name": "Validate Iru Associate Member",
+      "description": "validate_iru_associate_member via meok-iru-tir-international-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "check_aeo_status",
+      "name": "Check Aeo Status",
+      "description": "check_aeo_status via meok-iru-tir-international-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "check_cmr_consignment_note",
+      "name": "Check Cmr Consignment Note",
+      "description": "check_cmr_consignment_note via meok-iru-tir-international-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "check_dangerous_goods_adr_international",
+      "name": "Check Dangerous Goods Adr International",
+      "description": "check_dangerous_goods_adr_international via meok-iru-tir-international-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "prepare_border_crossing_pack",
+      "name": "Prepare Border Crossing Pack",
+      "description": "prepare_border_crossing_pack via meok-iru-tir-international-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+name: meok-iru-tir-international-mcp
+description: 'International road transport compliance: TIR Carnet, CMR consignment note, ADR dangerous goods'
+version: 1.0.0
+author: MEOK AI Labs
+homepage: https://proofof.ai
+repository: https://github.com/CSOAI-ORG/meok-iru-tir-international-mcp
+license: MIT
+categories:
+- compliance
+- governance
+tools:
+- name: check_tir_carnet_requirements
+  description: check tir carnet requirements
+- name: generate_tir_carnet_paperwork
+  description: generate tir carnet paperwork
+- name: validate_iru_associate_member
+  description: validate iru associate member
+- name: check_aeo_status
+  description: check aeo status
+- name: check_cmr_consignment_note
+  description: check cmr consignment note
+- name: check_dangerous_goods_adr_international
+  description: check dangerous goods adr international
+- name: prepare_border_crossing_pack
+  description: prepare border crossing pack
+build:
+  type: python
+  entrypoint: server.py
+  dependencies:
+  - mcp>=1.0.0
+runtime:
+  python: '>=3.10'

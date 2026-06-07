@@ -1,0 +1,23 @@
+# meok-iru-tir-international-mcp
+
+> International road transport compliance: TIR Carnet, CMR consignment note, ADR dangerous goods, AEO, IRU eTIR, border-crossing packs. Covers 78 TIR contracting parties and IRU's 1,000+ national associations. By MEOK AI Labs.
+
+MCP server by MEOK AI Labs. Framework: fastmcp. Transport: stdio.
+
+## Tools
+- check_tir_carnet_requirements
+- generate_tir_carnet_paperwork
+- validate_iru_associate_member
+- check_aeo_status
+- check_cmr_consignment_note
+- check_dangerous_goods_adr_international
+- prepare_border_crossing_pack
+
+## Install
+```
+pip install meok-iru-tir-international-mcp
+```
+
+## Links
+- PyPI: https://pypi.org/project/meok-iru-tir-international-mcp/
+- Docs: https://meok.ai
