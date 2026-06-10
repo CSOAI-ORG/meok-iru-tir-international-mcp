@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "meok-iru-tir-international-mcp": {
+      "command": "uvx",
+      "args": [
+        "meok-iru-tir-international-mcp"
+      ]
+    }
+  }
+}
