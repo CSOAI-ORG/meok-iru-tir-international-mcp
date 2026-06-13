@@ -1,0 +1,144 @@
+{
+  "name": "Meok Iru Tir International Mcp",
+  "version": "1.0.0",
+  "url": "https://mcp.meok.ai/meok-iru-tir-international-mcp/a2a",
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false,
+    "stateTransitionHistory": false
+  },
+  "protocolVersion": "0.3.0",
+  "description": "International road transport compliance: TIR Carnet, CMR consignment note, ADR dangerous goods, AEO, IRU eTIR, border-crossing packs. Covers 78 TIR contracting parties and IRU's 1,000+ national associations. By MEOK AI Labs.",
+  "provider": {
+    "organization": "MEOK AI LABS",
+    "url": "https://meok.ai"
+  },
+  "defaultInputModes": [
+    "application/json",
+    "text/plain"
+  ],
+  "defaultOutputModes": [
+    "application/json",
+    "text/plain"
+  ],
+  "skills": [
+    {
+      "id": "check_tir_carnet_requirements",
+      "name": "Check Tir Carnet Requirements",
+      "description": "Check Tir Carnet Requirements — a tool of the meok-iru-tir-international-mcp MCP.",
+      "tags": [
+        "compliance"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    },
+    {
+      "id": "generate_tir_carnet_paperwork",
+      "name": "Generate Tir Carnet Paperwork",
+      "description": "Generate Tir Carnet Paperwork — a tool of the meok-iru-tir-international-mcp MCP.",
+      "tags": [
+        "compliance"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    },
+    {
+      "id": "validate_iru_associate_member",
+      "name": "Validate Iru Associate Member",
+      "description": "Validate Iru Associate Member — a tool of the meok-iru-tir-international-mcp MCP.",
+      "tags": [
+        "compliance"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    },
+    {
+      "id": "check_aeo_status",
+      "name": "Check Aeo Status",
+      "description": "Check Aeo Status — a tool of the meok-iru-tir-international-mcp MCP.",
+      "tags": [
+        "compliance"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    },
+    {
+      "id": "check_cmr_consignment_note",
+      "name": "Check Cmr Consignment Note",
+      "description": "Check Cmr Consignment Note — a tool of the meok-iru-tir-international-mcp MCP.",
+      "tags": [
+        "compliance"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    },
+    {
+      "id": "check_dangerous_goods_adr_international",
+      "name": "Check Dangerous Goods Adr International",
+      "description": "Check Dangerous Goods Adr International — a tool of the meok-iru-tir-international-mcp MCP.",
+      "tags": [
+        "compliance"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    },
+    {
+      "id": "prepare_border_crossing_pack",
+      "name": "Prepare Border Crossing Pack",
+      "description": "Prepare Border Crossing Pack — a tool of the meok-iru-tir-international-mcp MCP.",
+      "tags": [
+        "compliance"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    }
+  ],
+  "documentationUrl": "https://meok.ai",
+  "x-meok": {
+    "mcp_name": "meok-iru-tir-international-mcp",
+    "verifier": "https://proofof.ai/verify",
+    "governed_by": "CSOAI 52-article charter"
+  }
+}
