@@ -69,7 +69,7 @@ import os
 import re
 from datetime import datetime, timezone, date, timedelta
 from typing import Optional
-from mcp.server.fastmcp import FastMCP
+from mcp.server.mcpserver import MCPServer as FastMCP  # mcp 2.x: FastMCP renamed MCPServer
 
 
 mcp = FastMCP("meok-iru-tir-international")
@@ -702,6 +702,37 @@ def prepare_border_crossing_pack(
             "Allow 2-4 hours at each non-EU border. Pre-lodge electronic declarations to reduce delay."
         ),
     })
+
+
+# ---------------------------------------------------------------------------
+# MCP 2026-07-28 wire - header-add migration (2026-10-08)
+# ---------------------------------------------------------------------------
+# stdio carries no HTTP headers, so Mcp-Method / Mcp-Name are not applicable to
+# this transport at runtime. When meok-iru-tir-international-mcp is exposed over HTTP, route the ingress
+# through the vendored mcp2026_shim (ShimASGI): it validates Mcp-Method /
+# Mcp-Name, injects params._meta.protocolVersion = "2026-07-28" into every
+# request, strips Mcp-Session-Id and answers legacy initialize / server-discover
+# locally (the session header is never emitted - stateless wire).
+# Refs: MIGRATION_NOTE.md, MCP_2026_WIRE_MIGRATION_PLAN_2026-10-07.md (3) + (4).
+# ---------------------------------------------------------------------------
+
+
+def http_app():
+    """ASGI app for HTTP exposure, wrapped in the 2026-07-28 wire shim.
+
+    stdio (``mcp.run()``) needs no shim; this is the enable path once the
+    server is fronted by an HTTP transport. Bodies are buffered, so responses
+    are requested in JSON mode rather than SSE.
+    """
+    from mcp2026_shim import WIRE_2026, ShimASGI, ShimConfig
+
+    return ShimASGI(
+        mcp.streamable_http_app(json_response=True),
+        ShimConfig(
+            protocol_version=WIRE_2026,
+            server_info={"name": "meok-iru-tir-international-mcp", "version": "1.0.0"},
+        ),
+    )
 
 
 def main() -> None:
